@@ -1,11 +1,14 @@
 import {NavigationContainer} from '@react-navigation/native';
 import * as React from 'react';
 import MainNavigator from './src/navigation/MainNavigator';
+import {PhotoProvider} from './src/contexts/PhotoContext';
 
 function App(): React.JSX.Element {
   return (
     <NavigationContainer>
-      <MainNavigator />
+      <PhotoProvider>
+        <MainNavigator />
+      </PhotoProvider>
     </NavigationContainer>
   );
 }

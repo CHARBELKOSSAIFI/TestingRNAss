@@ -3,24 +3,16 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Home from '../screens/Home';
 import CameraScreen from '../screens/CameraScreen';
 import {Button} from 'react-native';
+import MapScreen from '../screens/MapScreen';
 
 const MainStackNavigator = createNativeStackNavigator();
 
 const MainNavigator = () => {
   return (
-    <MainStackNavigator.Navigator
-      initialRouteName="Home"
-      //here the screen option for all the pages
-      // screenOptions={{
-      //     headerStyle:{
-      //       backgroundColor:'red',
-      //     }
-      // }}
-    >
+    <MainStackNavigator.Navigator initialRouteName="Home">
       <MainStackNavigator.Screen
         name="Home"
         component={Home}
-        //here just for the Home
         options={{
           headerStyle: {
             backgroundColor: 'red',
@@ -46,7 +38,17 @@ const MainNavigator = () => {
           },
         }}
       />
-      {/* <MainStackNavigator.Screen /> */}
+      <MainStackNavigator.Screen
+        name="MapScreen"
+        component={MapScreen}
+        options={{
+          headerSearchBarOptions: {
+            placeholder: 'Enter your text',
+            headerIconColor: 'red',
+            hintTextColor: 'red',
+          },
+        }}
+      />
     </MainStackNavigator.Navigator>
   );
 };

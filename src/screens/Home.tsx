@@ -10,6 +10,9 @@ const Home = () => {
   const navigateToProfile = () => {
     navigation.navigate('CameraScreen');
   };
+  const navigateToMap = () => {
+    navigation.navigate('MapScreen');
+  };
 
   return (
     <View style={styles.Button}>
@@ -17,6 +20,10 @@ const Home = () => {
 
       <View style={styles.Buttons}>
         <Button title="Go to Camera" onPress={navigateToProfile} />
+        <Button title="Go to Map" onPress={navigateToMap} />
+      </View>
+      <View>
+        <PhotoGallery />
       </View>
     </View>
   );
