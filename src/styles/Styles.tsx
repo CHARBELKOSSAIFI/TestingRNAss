@@ -81,4 +81,12 @@ export const styles = StyleSheet.create({
   buttonTextCamera: {
     color: 'white',
   },
+
+  containerGesture: {
+    flex: 1,
+    backgroundColor: '#f0f0f0',
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 20,
+  },
 });
